@@ -1,0 +1,58 @@
+.project-preview {
+  position: relative;
+  border-style: solid;
+  height: 200px;
+  max-width: 45%;
+}
+
+.preview-title {
+  width: 100%;
+  height: 45%;
+  background-color: red;
+}
+
+.project-title {
+  font-size: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-date {
+  padding-top : 10px;
+  padding-bottom: 10px;
+}
+
+.preview-summary {
+  background-color: green;
+  bottom: 0;
+  width: 100%;
+  height: 55%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+
+.preview-title-text {
+  float: left;
+  width: 70%;
+  height: 100%;
+  background-color: blue;
+}
+
+.preview-image {
+  top: 0;
+  float: right;
+  width: 30%;
+  height: 100%;
+  background-color: purple;
+}
+
+.preview-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  over-flow: hidden;
+}

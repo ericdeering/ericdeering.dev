@@ -1,5 +1,5 @@
 import type { Route } from "./+types/testing";
-import { MyButton } from "../playground/button";
+import { ProjectPreview } from "../playground/projectpreview"
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -9,5 +9,5 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Testing() {
-  return <MyButton />;
+  return <ProjectPreview />;
 }
