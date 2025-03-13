@@ -1,20 +1,59 @@
 import '../styles/projectpreview.css';
-import testImage from '../images/project-images/test.jpeg'
+
+function Preview({title, date, summary, imagePath}:any) {
+  return (
+    <>
+      <div className="preview-padding" />
+        <div className="project-preview">
+          <div className="preview-title">
+            <div className="preview-title-text">
+		          <div className="project-title">{title}</div>
+		          <div className="project-date">{date}</div>
+            </div>
+            <div className="preview-image">
+              <img src={imagePath} alt="test image" />
+            </div>
+          </div>
+          <div className="preview-summary">
+            {summary}
+          </div>
+        </div>
+      <div className="preview-padding" />
+    </>
+  )
+}
 
 export function ProjectPreview() {
+  const testPreview = {
+    id: "some id",
+    title: "Some Title",
+    date: "xx/xx/xxxx",
+    summary: "Lorem ipsum odor amet, consectetuer adipiscing elit. Ridiculus aptent aenean augue tellus parturient efficitur; ut ullamcorper primis. Curabitur dignissim natoque vitae luctus sit fusce netus. Euismod nec lacus curae egestas arcu ligula bibendum sit libero. Maximus mi aliquet dictum senectus sodales nisi sagittis. Vitae integer nulla sollicitudin laoreet taciti nunc enim. Dapibus tempor euismod tristique libero egestas. Feugiat nisl primis laoreet interdum arcu ad aliquam. Sit maecenas dictum nunc; risus risus commodo accumsan. Pellentesque placerat praesent suscipit vehicula ornare ullamcorper. Molestie diam parturient nullam pulvinar nam consequat. Fusce litora fringilla curae diam sem viverra rhoncus.",
+    imagePath:"images/project-images/test.jpeg" ,
+  }
+
+  const anotherPreview = {
+    id: "some other id",
+    title: "Another Title",
+    date: "xx/xx/xxxx",
+    summary: "This is a summary for another preview that I don't care to make as long.",
+    imagePath:"images/project-images/test1.jpeg",
+  }
+
+  let previewDatasets = [testPreview, anotherPreview, testPreview, testPreview, testPreview, testPreview];
+  let previews:any = [];
+
+  for (let i = 0; i < previewDatasets.length; i++) {
+    let data = previewDatasets[i];
+    previews.push(<Preview key={data.id} title={data.title} date={data.date} summary={data.summary} imagePath={data.imagePath} />);
+  }
+
   return (
-    <div className="project-preview">
-      <div className="preview-title">
-        <div className="preview-title-text">
-		      <div className="project-title">Some Title Very Long Title That will go off the page</div>
-		      <div className="project-date">xx/xx/xxxx</div>
-        </div>
-        <div className="preview-image">
-          <img src={testImage} alt="test image" />
-        </div>
-      </div>
-      <div className="preview-summary">
-	      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    <div className="scrollable-container">  
+      <div className="left-preview-area" style={{height: previews.length * 200}} />
+      <div className="right-preview-area" />
+      <div className="center-preview-area">
+        {previews}
       </div>
     </div>
   );
