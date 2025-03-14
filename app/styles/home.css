@@ -1,0 +1,29 @@
+@font-face {
+  font-family: Lekton;
+  src: url("./fonts/Lekton/LektonNerdFont-Regular.ttf")
+}
+
+* {
+  font-family: Lekton;
+  color: #909095;
+  background-color: #333;
+}
+
+.navbar {
+  
+}
+
+.project-previews {
+  width: 600px;
+}
+
+.about-me {
+  width: 300px;
+}
+
+.middle {
+  display: flex;
+  gap: 50px;
+  width: 100%;
+  justify-content: center;
+}

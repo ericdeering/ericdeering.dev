@@ -49,6 +49,7 @@ export function ProjectPreview() {
   }
 
   return (
+    <>
     <div className="scrollable-container">  
       <div className="left-preview-area" style={{height: previews.length * 200}} />
       <div className="right-preview-area" />
@@ -56,5 +57,6 @@ export function ProjectPreview() {
         {previews}
       </div>
     </div>
+    </>
   );
 }
