@@ -3,6 +3,7 @@ import { NavBar } from "../assets/navbar";
 import { ProjectPreview } from "../assets/projectpreview";
 import { AboutMeBanner } from "../assets/aboutmebanner";
 import "../styles/home.css";
+import "../styles/general.css";
 
 export function meta({}: Route.MetaArgs) {
   return [
