@@ -5,4 +5,5 @@ export default [
   route("testing", "./routes/testing.tsx"),
   route("tictactoe", "./routes/tictactoe.tsx"),
   route("resume", "./routes/resume.tsx"),
+  route("project", "./routes/project.tsx"),
 ] satisfies RouteConfig;

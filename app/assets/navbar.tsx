@@ -7,8 +7,10 @@ export function NavBar() {
       <a href="https://www.ericdeering.dev/resume">Resume</a>
       <a href="https://www.linkedin.com/in/eric-deering-69102918b/">LinkedIn</a>
       <a href="https://github.com/ericdeering">GitHub</a>
-	    <a href="https://www.ericdeering.dev/projects">Projects</a>
+      {/* 
+      <a href="https://www.ericdeering.dev/projects">Projects</a>
       <a href="https://www.ericdeering.dev/downloads">Downloads</a>
+      */}
     </div>
   );
 }

@@ -12,7 +12,7 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export default function Home() {
+function Home() {
   return (
     <>
       <div className="navbar">
@@ -29,3 +29,5 @@ export default function Home() {
     </>
   );
 }
+
+export default Home
