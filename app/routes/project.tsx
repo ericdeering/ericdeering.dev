@@ -16,7 +16,7 @@ function Project() {
       <div className="navbar">
         <NavBar />
       </div>
-      <div className="middle">
+      <div className="projectDetails">
         <ProjectDetails />
       </div>
     </>

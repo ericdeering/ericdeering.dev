@@ -3,13 +3,16 @@ import { useState, useEffect } from 'react';
 
 function Preview({data}:any) {
   if (!data) return
+  var projectUrl = "https://www.ericdeering.dev/project?project=" + data._id
   return (
     <>
       <div className="preview-padding" />
         <div className="project-preview">
           <div className="preview-title">
             <div className="preview-title-text">
-		          <div className="project-title">{data.title}</div>
+		          <div className="project-title">
+                <a href={projectUrl}>{data.title}</a>
+              </div>
 		          <div className="project-date">{data.date}</div>
             </div>
             <div className="preview-image">

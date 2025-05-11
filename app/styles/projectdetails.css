@@ -1,0 +1,15 @@
+.middle {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
+#title {
+  font-size: 48px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+#project-summary {
+  padding: 10px;
+}

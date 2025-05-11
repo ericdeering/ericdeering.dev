@@ -1,15 +1,21 @@
 import { useState, useEffect } from 'react'
 import { useSearchParams } from 'react-router'
+import "../styles/projectdetails.css";
 
 function CreateDiv({data}:any) {
   if (!data) return
   return (
     <div>
-      <div className="title">
-        {data.title}
-      </div>
-      <div className="project-summary">
-        {data.summary}
+      <div className="middle">
+        <div id="title">
+          {data.title}
+        </div>
+        <div id="project-image">
+          <img src={data.imagePath} alt="test image" />
+        </div>
+        <div id="project-summary">
+          {data.summary}
+        </div>
       </div>
     </div>
   )
