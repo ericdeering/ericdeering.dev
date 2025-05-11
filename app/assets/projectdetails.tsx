@@ -13,10 +13,10 @@ function CreateDiv({data}:any) {
         <div id="project-image">
           <img src={data.imagePath} alt="test image" />
         </div>
+      </div>
         <div id="project-summary">
           {data.summary}
         </div>
-      </div>
     </div>
   )
 }

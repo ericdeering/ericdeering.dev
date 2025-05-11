@@ -4,6 +4,11 @@
   text-align: center;
 }
 
+#project-image {
+  object-fit: cover;
+  overflow: hidden;
+}
+
 #title {
   font-size: 48px;
   font-weight: bold;
@@ -12,4 +17,6 @@
 
 #project-summary {
   padding: 10px;
+  width: 50%;
+  margin: auto;
 }

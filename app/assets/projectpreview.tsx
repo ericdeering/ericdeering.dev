@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 function Preview({data}:any) {
   if (!data) return
   var projectUrl = "https://www.ericdeering.dev/project?project=" + data._id
+  var iPath = data.imagePath
+  var imageName = iPath.substring(iPath.lastIndexOf("/") + 1)
   return (
     <>
       <div className="preview-padding" />
@@ -16,7 +18,7 @@ function Preview({data}:any) {
 		          <div className="project-date">{data.date}</div>
             </div>
             <div className="preview-image">
-              <img src={data.imagePath} alt="test image" />
+              <img src={data.imagePath} alt={imageName} />
             </div>
           </div>
           <div className="preview-summary">
@@ -48,6 +50,7 @@ export function ProjectPreview() {
             proto.push(<Preview key={r._id} data={r} />)
           }
           setSize[proto.length]
+          proto = proto.slice().reverse()
           setPreviews(proto)
       })
     }, [])
