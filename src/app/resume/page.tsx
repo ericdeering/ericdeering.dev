@@ -11,7 +11,7 @@ export default function Resume() {
       <img className="resume" src="../images/resumeImage.png" alt="Eric's Resume" />
       <div className="spacer" />
       <div className="download">
-		    <a href="../downloads/Eric Deering Resume.pdf" download="../downloads/Eric Deering Resume.pdf">
+		    <a href="/downloads/Eric Deering Resume.pdf" download="/downloads/Eric Deering Resume.pdf">
           <button>Download</button>
         </a>
       </div>
