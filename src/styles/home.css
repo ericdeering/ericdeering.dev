@@ -1,0 +1,14 @@
+.project-previews {
+  width: 600px;
+}
+
+.about-me {
+  width: 300px;
+}
+
+.middle {
+  display: flex;
+  gap: 50px;
+  width: 100%;
+  justify-content: center;
+}

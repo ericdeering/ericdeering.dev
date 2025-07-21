@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Lekton";
+  src: url("/fonts/Lekton/LektonNerdFont-Regular.ttf")
+}
+
+* {
+  font-family: "Lekton";
+  color: #909095;
+  background-color: #333; 
+}
