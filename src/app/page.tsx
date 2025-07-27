@@ -1,10 +1,12 @@
-import Image from "next/image";
 import { AboutMeBanner } from "../components/aboutmebanner";
 import { NavBar } from "../components/navbar";
 import { ProjectPreview } from "../components/projectpreview";
 
 import "../styles/home.css"
 import "../styles/general.css"
+
+
+
 
 export default function Home() {
   return (

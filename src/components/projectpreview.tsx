@@ -41,7 +41,7 @@ export function ProjectPreview() {
 
     useEffect(() => {
       fetch(
-        'http://localhost:8000/api/projects/', {
+        '/api', {
           method: 'GET',
         }
       )
