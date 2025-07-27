@@ -4,3 +4,5 @@ export async function GET(request: Request) {
   var projectData = await Database.getProjects();
   return Response.json(projectData)
 }
+
+export const runtime = "edge";
