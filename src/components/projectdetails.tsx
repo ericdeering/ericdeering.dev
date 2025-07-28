@@ -9,10 +9,13 @@ function CreateDiv({data}:any) {
   if (!data) return
   return (
     <div>
+      <div id="title">
+        {data.title}
+      </div>
+      <div id="date">
+        {data.date}
+      </div>
       <div className="middle">
-        <div id="title">
-          {data.title}
-        </div>
         <div id="project-image">
           <img src={data.imagePath} alt="test image" />
         </div>
