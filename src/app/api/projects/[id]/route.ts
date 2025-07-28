@@ -7,6 +7,5 @@ export async function GET(
 ) {
   const id = (await params).id;
   var data = await DatabaseHandler.getProject(id);
-  console.log(id)
   return Response.json(data);
 }
