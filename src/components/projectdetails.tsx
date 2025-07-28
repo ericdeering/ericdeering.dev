@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect, Suspense } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import "../styles/projectdetails.css";
 
@@ -47,9 +47,7 @@ export function ProjectDetails() {
     return (
       <div>
         <div>
-          <Suspense fallback={<div> Loading... </div>}>
-            {project}
-          </Suspense>
+          {project}
         </div>
       </div>
     )

@@ -1,5 +1,6 @@
 import { NavBar } from "../../components/navbar";
 import { ProjectDetails } from "../../components/projectdetails";
+import { Suspense } from 'react';
 import "../../styles/general.css";
 
 function Project() {
@@ -9,7 +10,9 @@ function Project() {
         <NavBar />
       </div>
       <div className="projectDetails">
-        <ProjectDetails />
+        <Suspense fallback={<div> Loading... </div>}>
+          <ProjectDetails />
+        </Suspense>
       </div>
     </>
   );
