@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation'
 import "../styles/projectdetails.css";
 
 function CreateDiv({data}:any) {
+  console.log(data)
   if (!data) return
   return (
     <div>
@@ -31,7 +32,7 @@ export function ProjectDetails() {
     const [ project, setProject ]:any = useState([])
 
     useEffect(() => {
-      var url = "http://localhost:8000/api/projects/" + projectId
+      var url = "/api/projects/" + projectId
       fetch(
       url, {
           method: 'GET',

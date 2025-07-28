@@ -1,6 +1,6 @@
-import Database from '../../lib/database'
+import { DatabaseHandler } from '../../lib/database'
 
 export async function GET(request: Request) {
-  var projectData = await Database.getProjects();
+  var projectData = await DatabaseHandler.getProjects();
   return Response.json(projectData)
 }

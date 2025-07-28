@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 
 function Preview({data}:any) {
   if (!data) return
-  var projectUrl = "https://www.ericdeering.dev/project?project=" + data._id
+  var projectUrl = "/project?project=" + data._id
   var iPath = data.imagePath
   var imageName = iPath.substring(iPath.lastIndexOf("/") + 1)
   return (
