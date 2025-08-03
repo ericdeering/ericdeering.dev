@@ -21,7 +21,7 @@ export class DatabaseHandler {
     let result = []
     try {
       await client.connect();
-      const projects = await client.db("projects").collection("projects");
+      const projects = await client.db("ericdeering_dev").collection("projects");
       const data = projects.find();
       for await (const project of data) {
         result.push(project)
@@ -35,7 +35,7 @@ export class DatabaseHandler {
   static async getProject(id: string) {
     try {
       await client.connect();
-      const projects = await client.db("projects").collection("projects");
+      const projects = await client.db("ericdeering_dev").collection("projects");
       const dbid = new ObjectId(id)
       const data = await projects.findOne({_id: dbid})
       return data
