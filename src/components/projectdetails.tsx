@@ -22,10 +22,10 @@ function MakeProjectBody(body: any) {
   const paths = [...data.matchAll(regexLink)]
   let images: any[] = []
   paths.forEach(path => {
-    data = data.replace(path[0], ", ")
+    data = data.replace(path[0], "%%%")
     images.push(path[1])
   });
-  let text = data.split(",")
+  let text = data.split("%%%")
   let counter = 0
   let bodyDict = []
 
